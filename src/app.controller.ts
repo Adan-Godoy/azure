@@ -14,7 +14,7 @@ export class AppController {
   }
 
   // 2. GET /:number -> Devuelve ((number+5)*2)
-  // ParseFloatPipe asegura que sea número. Si envían /hola, devuelve error 400 (no 500).
+  // ParseFloatPipe asegura que sea número. Devuelve error 400 (no 500).
   @Get(':number')
   getCalculo(@Param('number', ParseFloatPipe) numero: number) {
     const resultado = (numero + 5) * 2;
